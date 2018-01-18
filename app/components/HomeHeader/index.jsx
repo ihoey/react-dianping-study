@@ -35,7 +35,7 @@ class HomeHeader extends React.Component {
                             onChange={this.ChangeHandle.bind(this)}
                             onKeyUp={this.KeyUpHandle.bind(this)}
                             value={this.state.kwd} />
-                    </div>
+                    </div> 
                 </div>
             </div>
         );

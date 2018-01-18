@@ -19,7 +19,6 @@ class Category extends React.Component {
             auto: 2500,
             callback: (index) => {
                 // 更新当前轮播图的index
-                console.log(index);
                 this.setState({ index: index });
             }
         };
@@ -83,5 +82,4 @@ class Category extends React.Component {
 }
 
 // 使用 require.ensure 异步加载，还不支持 ES6 的 export 
-// export default Category
 export default Category;
