@@ -24,5 +24,4 @@ class HomeAd extends React.Component {
     }
 }
 
-
 export default HomeAd;
