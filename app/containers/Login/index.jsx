@@ -8,7 +8,7 @@ import * as userInfoActionsFromOtherFile from '../../actions/userinfo';
 
 import Header from '../../components/Header';
 import LoginComponent from '../../components/Login';
-    
+
 class Login extends React.Component {
     constructor(props, context) {
         super(props, context);
