@@ -11,11 +11,12 @@ class OrderList extends React.Component {
 
     render() {
         const data = this.props.data;
+        const submitComment = this.props.submitComment;
         return (
             <div>
                 {
                     data.map((e, i) => {
-                        return <Item key={i} data={e} />;
+                        return <Item key={i} data={e} submitComment={submitComment} />;
                     })
                 }
             </div>
