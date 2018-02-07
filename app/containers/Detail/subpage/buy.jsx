@@ -49,20 +49,34 @@ class Buy extends React.Component {
         hashHistory.push('/User/');
     }
 
-    // 收藏时间
+    // 收藏事件
     storeHandle() {
         const loginFlag = this.loginCheck();
         if (!loginFlag) {
             return;
         }
 
+        const id = this.props.id;
+        const storeActions = this.props.storeActions;
+        if (this.state.isStore) {
+            //已经收藏,需要取消收藏
+            storeActions.rm({ id: id });
+        } else {
+            //没有收藏,收藏
+            storeActions.add({ id: id });
+        }
+
+        //修改状态
+        this.setState({
+            isStore: !this.state.isStore
+        });
     }
 
     // 验证登录
     loginCheck() {
         const id = this.props.id;
         const userinfo = this.props.userinfo;
-        if (userinfo.username) {
+        if (!userinfo.username) {
             // 跳转到登陆页
             hashHistory.push(`/Login/${encodeURIComponent(`/detail/${id}`)}`);
             return false;
